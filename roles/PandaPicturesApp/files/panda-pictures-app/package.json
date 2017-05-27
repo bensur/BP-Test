@@ -1,0 +1,9 @@
+{
+  "name": "panda_pictures_app",
+  "version": "1.0.0",
+  "description": "Pandas love showing off!",
+  "main": "panda-pictures.js",
+  "dependencies": {
+    "httpdispatcher": "^1.0.0"
+  }
+}

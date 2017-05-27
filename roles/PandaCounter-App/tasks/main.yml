@@ -1,0 +1,10 @@
+---
+- name: copy panda-counter app
+  copy: src=panda-counter-app dest=/tmp/ owner=root group=root mode=0755 # TODO - restart on change..
+
+- name: npm install
+  npm: path=/tmp/panda-counter-app
+
+- name: Start panda-counter
+  command: forever start /tmp/panda-counter-app/panda-counter.js
+  when: "forever_list.stdout.find('/tmp/panda-counter-app/panda-counter.js') == -1"

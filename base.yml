@@ -12,3 +12,16 @@
   roles:
     - { role: nodejs, tags: nodejs }
     - { role: bamboo, tags: bamboo }
+
+- name: Base panda-counter service
+  hosts: base
+  become: yes
+  roles:
+    - { role: nodejs, tags: nodejs}
+    - { role: PandaCounter-App, tags: panda-counter}
+
+- name: Base panda-pictures service
+  hosts: base
+  become: yes
+  roles:
+    - { role: PandaPicturesApp, tags: panda-counter}
