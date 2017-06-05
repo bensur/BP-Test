@@ -1,0 +1,9 @@
+{
+  "name": "panda_counter_app",
+  "version": "1.0.0",
+  "description": "Pandas can count too!",
+  "main": "panda-counter.js",
+  "dependencies": {
+    "httpdispatcher": "^1.0.0"
+  }
+}

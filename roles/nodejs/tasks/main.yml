@@ -6,3 +6,14 @@
     - nodejs
     - npm
 
+- name: Install nodejs-legacy
+  become: yes
+  apt: pkg=nodejs-legacy state=installed
+
+- name: "Install forever (to run Node.js app)."
+  npm: name=forever global=yes state=present
+
+- name: "Check list of Node.js apps running."
+  command: forever list
+  register: forever_list
+  changed_when: false
