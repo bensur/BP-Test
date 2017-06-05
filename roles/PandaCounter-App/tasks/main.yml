@@ -6,5 +6,5 @@
   npm: path=/tmp/panda-counter-app
 
 - name: Start panda-counter
-  command: forever start /tmp/panda-counter-app/panda-counter.js
+  command: forever start -l /tmp/panda-counter-app/panda-counter.log /tmp/panda-counter-app/panda-counter.js
   when: "forever_list.stdout.find('/tmp/panda-counter-app/panda-counter.js') == -1"
